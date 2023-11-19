@@ -22,7 +22,7 @@ from config import BANNED_USERS
 from config import OWNER_ID
 
 
-@app.on_message(filters.command(["stats", "gstats"]) & filters.group & ~BANNED_USERS)
+@app.on_message(filters.command(["astats", "agstats"]) & filters.group & ~BANNED_USERS)
 @language
 async def stats_global(client, message: Message, _):
     upl = stats_buttons(_, True if message.from_user.id in SUDOERS else False)
